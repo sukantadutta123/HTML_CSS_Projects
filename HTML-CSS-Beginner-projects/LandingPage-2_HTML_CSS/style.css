@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'SofaChrome';
+    src: url('sofachrome\ rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SofaChrome';
+    src: url('sofachrome\ rg\ it.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Hyperion';
+    src: url('HYPERION.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Hyperion';
+    src: url('HYPERION.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'SofaChrome', sans-serif;
+    color: #f64d4a;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+:root{
+    --drop-shoadow:0px 3px 5px 2px rgba(0,0,0,0.171);
+    --main-color:#f64d4a;
+}
+
+/* nav bar */
+
+.navbar{
+    width:100%;
+    padding: 20px 0;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+}
+
+.container h2{
+    font-weight: 700;
+    font-size: 25px;
+    cursor: pointer;
+    color:#D2340D;
+}
+
+
+.container h4 {
+    font-size: 10px;
+    font-family:'Hyperion',sans-serif;
+    font-weight: bold;
+    background: rgb(226,22,19);
+    background: linear-gradient(90deg, rgba(226,22,19,1) 8%, rgba(230,192,22,1) 39%, rgba(234,213,16,1) 61%, rgba(234,49,8,1) 79%, rgba(228,255,0,1) 97%);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar .container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+     
+}
+.navbar{
+    background-color: #2B577C;
+}
+
+.nav{
+    justify-self: flex-end;
+    display:flex;
+    align-items: center;
+}
+
+.nav a{
+    margin-left: 50px;
+    padding: 10px;
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#CFD8D3;
+}
+
+.nav a:hover{
+    color:#f64d4a;
+}
+
+
+.nav .cart{
+margin-left: 70px;
+padding: 10px 35px;
+border: 2px solid #4C656C;
+}
+
+.nav .cart:hover{
+    background-color: red ;
+    color:white;
+}
+
+/* Main Section */
+.main{
+    width:100%;
+
+}
+
+.main-container {
+    width: 100%;
+    background: #0A0A08;
+    position: relative; /* Ensure stars are positioned relative to this container */
+    
+}
+.marvel-img {
+     /* Ensure image fills its container */
+     width: 30px; /* Set a smaller width */
+    height: auto; /* Let the browser calculate the height proportionally */
+    max-width: 40%; /* Ensure the image does not exceed its container */
+    display: block; 
+    margin-top: -40px;  
+    margin-left: 20px; 
+    object-fit: contain; 
+}
+
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.8) 5%, transparent 2%);
+    background-size: 18px 15px; /* Size of the stars */
+    pointer-events: none; /* Ensure clicks pass through the stars */
+}
+
+
+
+.main .main-container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center; /* Ensure items are centered vertically */
+}
+
+.main .main-container img {
+    width: 100%; /* Ensure image fits its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers its box without stretching */
+}
+
+.present{
+    margin-left: 90px;
+}
+
+.spider{
+    margin-left: 50px;
+    font-family: 'sofachrome',sans-serif;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+
+.home{
+    margin-left: 250px;
+    font-size: 36px;
+    font-family: 'Hyperion',sans-serif;
+    color:goldenrod;
+    margin-top: 5px;
+}
+
+.main-container .btn{
+    background: var(--main-color);
+    padding: 15px 25px;
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 15px;
+    color: white ;
+    border-radius: 1px;
+    box-shadow: var(--drop-shadow);
+    transition: 0.2s ease-in-out;
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  
+  .main-container .btn:hover{
+    background: rgb(214, 214, 214);
+    color: black;
+  }
+  
+  .main-container img{
+    width: 100%;
+    transition: fadeUp 0.5s ease-in-out;
+    animation: fadeUp 0.8s ease;
+  }
+  
+  @media(max-width:900px){
+  
+    .main .main-container{
+      grid-template-columns: 1fr;
+    }
+    .main-container img{
+      order: -1;
+    }
+  }
+  
