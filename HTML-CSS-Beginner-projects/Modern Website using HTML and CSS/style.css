@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-colour: white;
+    --secondary-text-colour:#577592;
+    --accent-colour:#2294ed;
+    --accent-colour-dark:#2294ed;
+    --padding-inline-section:20px;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins',sans-serif;
+    color:var(--primary-text-colour);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.25rem;
+    color:var(--secondary-text-colour);
+    line-height: 1.8rem;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Utility Class */
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight:700;
+}
+
+.container{
+    max-width:1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex{
+    display:flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.hover-link{
+    color:var(--primary-text-colour);
+    transition: 0.2s ease-out;
+}
+
+.hover-link:hover{
+    color:var(--accent-colour);
+}
+
+.primary-button{
+    background-color: var(--accent-colour);
+    border-radius: 6px;
+    font-weight: 700 ;
+    color:white !important;
+    padding:10px 18px;
+    box-shadow: 0 0 2px var(--secondary-text-colour);
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover{
+    background-color: var(--accent-colour-dark);
+}
+
+.secondary-button{
+    border:0.5px solid var(--secondary-text-colour);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-colour) !important;
+    padding:10px 18px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover{
+    border-color: var(--accent-colour);
+    color:var(--accent-colour) !important;
+}
+
+/* top banner */
+.top-banner{
+    background-image: url('top.jpg');
+    background-color:#4fb3d4 ;
+    background-size: cover;
+    background-position: top;
+}
+
+.banner-text{
+    color:white;
+    padding: 15px 10px;
+    text-align:center;
+
+} 
+
+/* Adjust the company logo */
+.company-logo img {
+    width:120px;
+}
+/* nav */
+nav{
+    background-color: black;
+}
+
+.main-nav {
+    
+    justify-content: space-between;
+}
+
+
+.nav-links ul{
+    justify-content: end;
+    gap:40px
+}
+.nav-links {
+    flex-basis: 730px;
+}
+
+
+/*Header*/
+
+header{
+    padding:50px var(--padding-inline-section) 0;
+}
+
+.header-section{
+    justify-content: center;
+    gap:50px;
+}
+.header-left{
+    max-width:40vw;
+    
+}
+
+.header-left h1{
+    text-align: center;
+    margin-top: -40px;
+    background: -webkit-linear-gradient(red, black);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.header-left h3{
+    margin-top:1.5px;
+    margin-top: 3px;
+    color:rgba(0, 0, 0, 0.7581);
+    text-align: center;
+}
+.header-left p{
+    text-align: center;
+    margin-top: 20px;
+}
+.header-right img{
+    width:400px;
+    border-radius: 20px;
+}
+
+.headleftbtn{
+    margin-left:40%;
+    margin-top: 15px;
+}
+
+.headleftbtn:hover{
+    color: black;
+    background-color: rgb(239, 73, 73);
+} 
+
+
+
+/*Companies Header*/
+
+.companies-header{
+    text-align: center;
+    margin-block: 30px;
+    color:rgba(0, 0, 0, 0.7581);
+}
+
+.logos{
+    justify-content: space-between;
+    
+}
+
+
+.logo{
+    height:46px;
+
+}
+
+/*Features Section*/
+
+.features-section {
+    padding: 80px var(--padding-inline-section);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('back.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Ensures the image covers the section */
+}
+
+
+.features-header {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7581);
+}
+
+.features-heading-text {
+    margin-bottom: 20px;
+}
+
+.service {
+    color: rgba(0, 0, 0, 0.7581);
+    background-color: black;
+}
+
+.features-card {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    flex-basis: calc(33.333% - 20px); 
+    margin-bottom: 40px; /* Add some space between the rows */
+}
+
+.img1 {
+    width: 150px;
+}
+
+.features-area {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.features-area h3 {
+    color: black;
+}
+
+/*Big Feature Section*/
+.big-feature-section {
+    padding: 30px var(--padding-inline-section) 0;
+    background-color: black;
+}
+
+.big-feature-container {
+    display: flex;
+    gap: 50px;
+}
+
+.feature-img {
+    flex: 0 0 40%;
+}
+
+.feature-img img {
+    width: 60%;
+    
+}
+.img2{
+    margin-left: 170px; 
+    width:100%;
+}
+
+.feature-desc {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Assuming text color needs to be visible on black background */
+    gap:60px;
+}
+
+/*examples section*/
+
+.examples-header{
+    flex-direction: column;
+    gap:15px;
+    color: rgba(0, 0, 0, 0.7581);
+    margin-top: 30px;
+}
+
+.examples-heading-text{
+    margin-bottom:20px;
+}
+.examples-area {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into multiple rows */
+    justify-content: space-between; /* Space out the cards evenly */
+    margin-block: 30px;
+    gap: 30px; /* Adjusts spacing between the cards */
+    margin-top:50px
+}
+
+.examples-card {
+    width: calc(25% - 30px); /* 25% width minus the gap for consistent spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    position: relative;
+    min-height: 300px;
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.3)), url(sup.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    transition: transform 0.3s ease, background 1s ease, color 1s ease; /* Smooth transition for transform, background, and color */
+    margin: 15px 0;
+}
+
+.examples-card:hover {
+    transform: scale(1.05); /* Slightly zooms in the card */
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.3)), url(sup2.jpg); /* Change to your new image URL */
+    color: yellow; /* Change text color on hover */
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.8);
+}
+
+.card-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    text-align: center;
+    transition: color 1s ease; /* Smooth transition for text color */
+}
+
+.examples-card:hover .card-text {
+    color: yellow; /* Change text color on hover */
+}
+
+
+.examples-card:nth-child(1) {
+    background-image: url('sup.jpg');
+}
+.examples-card:nth-child(1):hover {
+    background-image: url('sup2.jpg');
+}
+
+
+
+.examples-card:nth-child(2) {
+    background-image: url('bat.jpg');
+}
+.examples-card:nth-child(2):hover {
+    background-image: url('bat2.png');
+}
+
+
+.examples-card:nth-child(3) {
+    background-image: url('cap.jpg');
+}
+
+.examples-card:nth-child(3):hover {
+    background-image: url('cap2.jpg');
+}
+
+
+.examples-card:nth-child(4) {
+    background-image: url('iron.jpg');
+}
+
+.examples-card:nth-child(4):hover {
+    background-image: url('iron2.jpg');
+}
+
+
+
+.examples-card:nth-child(5) {
+    background-image: url('ant2.jpg');
+}
+.examples-card:nth-child(5):hover {
+    background-image: url('ant.jpg');
+}
+
+
+
+.examples-card:nth-child(6) {
+    background-image: url('str2.jpg');
+}
+.examples-card:nth-child(6):hover {
+    background-image: url('str.jpg');
+}
+
+
+
+.examples-card:nth-child(7) {
+    background-image: url('thor.jpg');
+}
+.examples-card:nth-child(7):hover {
+    background-image: url('thor2.jpg');
+}
+
+
+
+.examples-card:nth-child(8) {
+    background-image: url('ded.jpg');
+}
+.examples-card:nth-child(8):hover {
+    background-image: url('ded2.jpg');
+}
+
+/*CTA SECTION*/
+.cta-section {
+    margin-top: 50px;
+    position: relative;
+    background-image: url('para.jpg'); /* Replace 'your-image.jpg' with the path to your background image */
+    background-attachment: fixed; /* Creates the parallax effect */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center;
+    height:400px;
+     /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Ensures text color is readable on the background */
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust rgba for transparency */
+    /* z-index: 0; */
+}
+
+.cta-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 1; 
+}
+
+.cta-section-container h2 {
+    color: rgba(255, 255, 255, 0.9); /* Adjusted for better contrast */
+}
+
+.cta-section-container p {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.7); /* Adjusted for better contrast */
+}
+
+/*footer*/
+footer{
+    padding-block:80px;
+    background-color: #ebf2fa;
+}
+
+.log{
+    border-radius: 65%;
+}
+
+.link-column{ 
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
+    color:black;
+}
+.hover-link{
+    color:#577592
+}
+.footer-container{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.subfooter {
+    background-image: url('top.jpg');
+    background-color: #4fb3d4;
+    background-size: cover;
+    background-position: top;
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+.subfooter-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items vertically center */
+    max-width: 1200px; /* Set max-width for container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+.small-bold-text {
+    flex: 1; /* Allow text to take available space */
+    text-align: center; /* Center text horizontally */
+    font-weight: bold;
+    color: white; /* Ensure text color contrasts with background */
+}
+
+.hover-link1 {
+    color: white; /* Ensure icon color contrasts with background */
+    font-size: 30px;
+    margin: 0 10px; /* Add horizontal spacing between icons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.fa-linkedin:hover {
+    color: #2294ed;
+}
+
+.fa-instagram:hover {
+    color: #2294ed;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .cta-section {
+        background-attachment: scroll; /* Disable the parallax effect on smaller screens */
+    }
+
+    .cta-section-container {
+        padding: 10px;
+    }
+
+    .primary-button {
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .examples-card {
+        width: calc(50% - 30px); /* Two cards per row on tablets and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .examples-card {
+        width: 100%; /* One card per row on mobile screens */
+        margin-bottom: 30px; /* Add margin to the bottom to space out the cards vertically */
+    }
+}
